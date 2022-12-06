@@ -14,11 +14,11 @@ export const typeDefs = gql`
         birthday: String
         password: String
         username: String
-        observations: [Observation]
+        observation: [Observation]
     }
 
     type Observation {
-        obvId: String
+        id: String
         patientId: String
         weight: Int
         insulinLevel: String

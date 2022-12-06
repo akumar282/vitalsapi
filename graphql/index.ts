@@ -6,10 +6,16 @@ import { CosmosClient } from '@azure/cosmos';
 // Resolver map.
 const resolvers = {
     Query: {
-      user: async (_: any, params: { id: any; }, context: { dataSources: { user: { findOneById: (arg0: any) => any}; }; }) => {
-        return context.dataSources.user.findOneById(params.id);
+        user: async (_: any, params: { id: any; }, context: { dataSources: { user: { findOneById: (arg0: any) => any}; }; }) => {
+            return context.dataSources.user.findOneById(params.id);
+      },
+        observation: async (_: any, params: { id: any; }, context: { dataSources: { observation: { findOneById: (arg0: any) => any}; }; }) => {
+            return context.dataSources.observation.findOneById(params.id);
       },
     },
+    // Mutation: {
+    //     user : async (_ , params: {createUser})
+    // }
   };
   
 

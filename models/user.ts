@@ -7,6 +7,7 @@ export interface User {
   username: string;
   birthday: string;
   password: string;
+  observation: Observation[]
 }
 
 export interface Observation {
